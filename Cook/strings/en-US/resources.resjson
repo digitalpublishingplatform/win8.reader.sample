@@ -1,0 +1,13 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+{
+    "About"                 : "About",
+    "AboutTitle"            : "Orchard Publishing Reader",
+    "AboutAuthor"           : "Developed by DotNetSolutions",
+    "AboutContact"          : "Contact:",
+    "AboutTwitter"          : "Twitter:",
+    "AboutBlog"             : "Blog:",
+    "AboutCredits"          : "Special thanks to my friends:",
+    "PrivacyPolicy"         : "Privacy policy",
+    "PrivacyPolicyHref"     : "http://www.DotNetSolutions.co.uk",
+    "LoadingData"           : "Loading data...please wait"
+}

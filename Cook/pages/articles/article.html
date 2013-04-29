@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Article</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/articles/article.css" rel="stylesheet" />
+    <script src="/pages/articles/article.js"></script>
+</head>
+    <body>
+        
+        <div id="videosFlipViewTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="overlaidItemTemplate" data-win-bind="style.display : mainVideoUrl DigitalPublishingPlatform.Tools.SetVisibility">
+                <video width="480"  controls="controls"  data-win-bind="src: mainVideoUrl; poster: thumbnailUrl"></video>
+                <div class="overlay">
+                    <h2 class="ItemTitle" data-win-bind="innerText: title"></h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="imagesFlipViewItemTemplate" data-win-control="WinJS.Binding.Template">
+
+                <img width="480" alt="image" src="../../images/transparent.png" class="image" data-win-bind="src: imageUrl" />
+
+        </div>
+
+        <!-- The content that will be loaded and displayed. -->
+        <div class="itemdetailpage fragment">
+            <header aria-label="Header content" role="banner">
+                <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+                <h1 class="titlearea win-type-ellipsis">
+                    <span class="pagetitle"></span>
+                </h1>
+            </header>
+            <div class="content" aria-label="Main content" role="main">
+                <article>
+                    <div>
+                        <header>
+                            <h2 class="item-title"></h2>
+                            <h4 class="item-subtitle"></h4>
+                        </header>
+                            <img id="mainImage" alt="main image" />
+                        <div class="item-content"></div>
+           
+                        <div id="images">
+                            <!--Videos-->
+                            <div id="videosFlipView" class="flipView" data-win-control="WinJS.UI.FlipView"></div>
+                            <!--Images-->
+                            <div id="imagesFlipView" class="flipView" data-win-control="WinJS.UI.FlipView"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </body>
+</html>

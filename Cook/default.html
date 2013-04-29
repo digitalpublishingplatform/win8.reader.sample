@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Orchard publishing reader</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- Cook references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="/js/tools.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="/js/publicationarticle.js"></script>
+</head>
+<body>
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/publications/publications.html'}"></div>
+    <!--<div id="appbar" data-win-control="WinJS.UI.AppBar">
+        </div>-->
+
+    <!--About-->
+    <div id="aboutDiv" data-win-control="WinJS.UI.SettingsFlyout" data-win-options="{width:'narrow'}">
+        <div class="win-header">
+            <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton">
+            </button>
+            <div class="win-label win-type-ellipsis" data-win-res="{innerText: 'AboutTitle'}"></div>
+        </div>
+        <div class="win-content">
+            <p>
+                <span id="aboutVersion"></span>
+            </p>
+            <p>
+                <span data-win-res="{innerText: 'AboutAuthor'}"></span>
+            </p>
+            <p>
+                <span data-win-res="{innerText: 'AboutContact'}"></span><br/>
+                <a href="mailto:info@DotNetSolutions.co.uk">info@DotNetSolutions.co.uk</a>
+            </p>
+            <p>
+                <span data-win-res="{innerText: 'AboutTwitter'}"></span><br/>
+                <a href="https://twitter.com/dotnetsolutions">@dotnetsolutions</a>
+            </p>
+            <p>
+                <span data-win-res="{innerText: 'AboutBlog'}"></span><br/>
+                <a href="http://www.DotNetSolutions.co.uk/blog">http://www.DotNetSolutions.co.uk/blog</a>
+            </p>
+            <p>
+                <span data-win-res="{innerText: 'AboutCredits'}"></span><br/>
+                <a href="http://www.DotNetSolutions.co.uk">DotNetSolutions</a>
+            </p>
+            <p>
+                <a data-win-res="{href: 'PrivacyPolicyHref'}"><span data-win-res="{innerText: 'PrivacyPolicy'}"></span></a>
+            </p>
+        </div>
+    </div>
+
+    <!--Wait zone-->
+    <div id="waitZone">
+        <div class="downloadText" data-win-res="{innerText: 'LoadingData'}"></div>
+        <progress class="downloadRing win-ring"></progress>
+    </div>
+</body>
+</html>
