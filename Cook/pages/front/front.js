@@ -44,7 +44,7 @@
                         that._articles.push(DigitalPublishingPlatform.PublicationArticle(tag, issueFront.MainArticle));
                     }
 
-                    issueFront.CategoriesAndArticles.forEach(function (item) {
+                    issueFront.TagsAndArticles.forEach(function (item) {
                         tag = { key: item.Category, name: item.Category, orderby: counter++ };
                         item.Articles.forEach(function (a) {
                             that._articles.push(new DigitalPublishingPlatform.PublicationArticle(tag, a));
